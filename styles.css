@@ -1,0 +1,39 @@
+
+
+
+
+
+h1{color:rgb(163, 12, 97);}
+    
+h2{background:rgb(34, 199, 72);}
+
+h3{color:rgb(23, 39, 212);}
+
+#beautifulcity {color: rgb(135, 128, 29);}
+
+
+.places{color:rgb(212, 77, 36);}
+
+#container{width:650px;
+margin:auto;
+border: 3px solid rgb(135, 128, 29);
+padding:13 px;
+}
+.box1 {
+
+    background-color: aqua;
+    position: absolute;
+    margin-top: -125%;   
+    margin-right: 82%;
+    width: 200;
+    height:fit-content;
+    color:aqua;
+}
+.pic5 {  border-radius: 50%;
+    opacity: 0.8;}
+    
+
+
+.box3 {
+    background-color: aqua;
+}
