@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- This is based on github.com's great template here:
+-->
+<html>
+
+<head>
+    <title>skyview</title>
+    <link rel="stylesheet" href="styles2.css">
+    <p align=" center ">
+        <!--This draws the Canvas on the webpage -->
+        <canvas id="mycanvas"></canvas></p>
+</head>
+
+
+
+
+<body>
+    <h1>Une vie d'amour</h1>
+    <p>
+        Une vie d'amour
+        Que l'on s'était jurée
+        Et que le temps a désarticulée
+        Jour après jour<br>
+        Blesse mes pensées
+        Tant de mots d'amour
+        En nos cœurs étouffés
+        Dans un sanglot, l'espace d'un baiser
+        Sont restés sourds
+        À tout, mais n'ont rien changé<br>
+         
+        Car un au revoir
+        Ne peut être un adieu
+        Avec l'espoir
+        Je m'en remets à Dieu
+        Pour te revoir
+        Et te parler encore
+        Et te jurer encore<br>
+         
+        Une vie d'amour
+        Remplie de rires clairs
+        Un seul chemin
+        Déchirant nos enfers
+        Allant plus loin
+        Que la nuit
+        La nuit, la nuits<br>
+         
+        Une vie d'amour
+        Que l'on s'était jurée
+        Et que le temps a désarticulée
+        Jour après jour
+        Blesse mes pensées
+        Tant de mots d'amour
+        Que nos cœurs ont criés
+        De mots tremblés, de larmes soulignées
+        Dernier recours
+        De joies désharmonisées<br>
+         
+        Des aubes en fleurs
+        Aux crépuscules gris
+        Tout va, tout meurt
+        Mais la flamme survit
+        Dans la chaleur
+        D'un immortel été
+        D'un éternel été<br>
+         
+        Une vie d'amour
+        Une vie pour s'aimer
+        Aveuglément
+        Jusqu'au souffle dernier
+        Bon an mal an
+        Mon amour
+        T'aimer encore
+        Et toujours<br>
+        </p>
+    <img class="plane" src="plane6.png" alt="plane pic" width="250" height="170">
+
+    <video class="Teharn43" controls preload="autoplay" width="400">
+        <source src="Patrick Une.mp4"    type="video/mp4" >
+       
+       </video>
+       </div>
+
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+    <script>
+        var sketchProc = function(processingInstance) {
+            with(processingInstance) {
+                size(1300, 500);
+                frameRate(30);
+
+                background(0, 55, 255, 55);
+
+
+                var zOff = 0.0;
+
+                draw = function() {
+
+
+                    var xOff = 0.0;
+                    for (var x = 480; x < 680; x++) {
+                        var yOff = 0.0;
+                        for (var y = 200; y < 400; y++) {
+                            var bright = map(noise(xOff, yOff, zOff), 0, 1, 0, 255);
+                            stroke(bright, bright + 65, bright + 159);
+                            point(x, y);
+                            yOff += 0.01;
+                        }
+                        xOff += 0.01;
+                    }
+
+                    zOff += 0.02;
+                };
+
+            }
+
+        };
+
+        document.body.style.backgroundImage = "url(cloud.jpg)";
+        // Get the canvas that Processing-js will use
+        var canvas = document.getElementById("mycanvas");
+        canvas.style.zIndex = 1;
+        // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+        var processingInstance = new Processing(canvas, sketchProc);
+        // Get the canvas that Processing-js will use
+    </script>
+
+</body>
+
+
+</html>
